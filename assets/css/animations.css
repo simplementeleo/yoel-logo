@@ -1,0 +1,52 @@
+@keyframes rectangule {
+  0% {
+    width: 10px;
+    height: 1px;
+  }
+  50% {
+    height: 1px;
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes leftTriangle {
+  from {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+@keyframes rightTriangle {
+  from {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+@keyframes minTriangle {
+  0% {
+    opacity: 0;
+    left: 41%;
+    width: 0;
+  }
+  25% {
+    width: 60%;
+    opacity: 1;
+  }
+  50% {
+    width: 8%;
+  }
+  100% {
+    left: 10px;
+  }
+}
+@keyframes imageScale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */

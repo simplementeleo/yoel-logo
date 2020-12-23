@@ -1,0 +1,155 @@
+@keyframes rectangule {
+  0% {
+    width: 10px;
+    height: 1px;
+  }
+  50% {
+    height: 1px;
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes leftTriangle {
+  from {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+@keyframes rightTriangle {
+  from {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+@keyframes minTriangle {
+  0% {
+    opacity: 0;
+    left: 41%;
+    width: 0;
+  }
+  25% {
+    width: 60%;
+    opacity: 1;
+  }
+  50% {
+    width: 8%;
+  }
+  100% {
+    left: 10px;
+  }
+}
+@keyframes imageScale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.one {
+  background: url("../images/bg-one.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.one .one__logo {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0000, #060815);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one .one__logo .one__logo__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.one .one__logo .one__logo__container .one__image {
+  width: 7.5em;
+  z-index: 1;
+  margin-top: -13px;
+  animation: 3s imageScale ease-in-out;
+}
+.one .one__logo .one__logo__container .one__logo__bar {
+  width: 11em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one .one__logo .one__logo__container .one__logo__bar.__one {
+  top: -0.4em;
+}
+.one .one__logo .one__logo__container .one__logo__bar.__two {
+  transform: translate(55px, 87px) rotateZ(121deg);
+}
+.one .one__logo .one__logo__container .one__logo__bar.__three {
+  transform: translate(-55px, 87px) rotateZ(-121deg);
+}
+.one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__rectangule {
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background: #ffbf08;
+  animation: 1s rectangule ease-in-out;
+  animation-delay: 0.5s;
+}
+.one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__rectangule::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #ffbf08;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  left: -14.7px;
+  animation: 1s leftTriangle ease-in-out;
+  animation-delay: 0.5s;
+}
+.one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__rectangule::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #ffbf08;
+  position: absolute;
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+  right: -15px;
+  animation: 1s rightTriangle ease-in-out;
+  animation-delay: 0.5s;
+}
+.one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__plus {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background: #333;
+  bottom: 3px;
+  left: 10px;
+  animation: 2s minTriangle ease-in-out;
+  animation-delay: 1s;
+}
+.one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__plus::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #333;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  left: -4.7px;
+}
+.one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__plus::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #333;
+  position: absolute;
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+  right: -5px;
+}
+
+/*# sourceMappingURL=sections.css.map */

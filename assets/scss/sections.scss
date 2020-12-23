@@ -1,0 +1,120 @@
+@import 'animations.scss';
+
+$main-color: #333;
+.one {
+	background: url('../images/bg-one.png') no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 100vh;
+	.one__logo {
+		position: relative;
+		height: 100vh;
+		background: linear-gradient(to bottom, #0000, #060815);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.one__logo__container {
+			position: relative;
+			display: flex;
+			justify-content: center;
+
+			.one__image {
+				width: 7.5em;
+				z-index: 1; 
+				margin-top: -13px;
+				animation: 3s imageScale ease-in-out;
+				// animation-delay: 2.5s;
+			}
+			.one__logo__bar {
+
+				width: 11em;
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&.__one {
+					top: -.4em;
+				}
+				&.__two {
+					transform: translate(55px, 87px) rotateZ(121deg);
+				}
+				&.__three {
+					transform: translate(-55px, 87px) rotateZ(-121deg);
+					
+				}
+
+
+
+				.one__logo__bar__rectangule {
+					position: absolute;
+					width: 100%;
+					height: 12px;
+					background: #ffbf08; 
+					animation: 1s rectangule ease-in-out;
+					animation-delay: .5s;
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						background: #ffbf08;
+						position: absolute;
+						clip-path: polygon(0 0, 100% 0, 100% 100%);
+						left: -14.7px;
+						animation: 1s leftTriangle ease-in-out;
+						animation-delay: .5s;
+					}
+					&::after {
+						content: "";
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						background: #ffbf08;
+						position: absolute;
+						clip-path: polygon(0 100%, 100% 0, 0 0);
+						right: -15px;
+						animation: 1s rightTriangle ease-in-out;
+						animation-delay: .5s;
+					}
+
+				}
+				.one__logo__bar__plus {
+					position: absolute;
+					width: 30px;
+					height: 5px;
+					background: $main-color;
+					bottom: 3px;
+					left: 10px;
+					animation: 2s minTriangle ease-in-out;
+					animation-delay: 1s;
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 5px;
+						height: 5px;
+						background: $main-color;
+						position: absolute;
+						clip-path: polygon(0 0, 100% 0, 100% 100%);
+						left: -4.7px;
+					}
+					&::after {
+						content: "";
+						display: inline-block;
+						width: 5px;
+						height: 5px;
+						background: $main-color;
+						position: absolute;
+						clip-path: polygon(0 100%, 100% 0, 0 0);
+						right: -5px;
+					}
+				}
+
+
+
+			}
+		}
+
+
+	}
+}

@@ -1,0 +1,32 @@
+* { margin: 0; padding: 0; scroll-behavior: smooth;  }
+@import 'pageOne.scss';
+@import 'navigation.scss';
+@import 'sections.scss';
+// sass --watch assets/scss:assets/css
+body {
+	background: #131829;	
+	color: #eee;
+}
+
+.section {
+	height: 100vh;
+	width: 100%;
+
+	&.one {
+		background: url('../images/bg-one.png') no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	// &.two {
+	// 	background: blue;
+	// }
+}
+::-webkit-scrollbar {
+    width: .1px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
