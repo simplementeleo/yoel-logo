@@ -34,7 +34,7 @@
     opacity: 1;
   }
   50% {
-    width: 8%;
+    width: 6%;
   }
   100% {
     left: 10px;
@@ -46,6 +46,16 @@
   }
   to {
     transform: scale(1);
+  }
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 1px 0px 13px #ffbf08;
+    transform: rotateZ(0);
+  }
+  100% {
+    box-shadow: 1px 250px 13px #ffbf08;
+    transform: rotateZ(720deg);
   }
 }
 

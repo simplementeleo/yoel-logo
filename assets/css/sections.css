@@ -34,7 +34,7 @@
     opacity: 1;
   }
   50% {
-    width: 8%;
+    width: 6%;
   }
   100% {
     left: 10px;
@@ -48,6 +48,16 @@
     transform: scale(1);
   }
 }
+@keyframes shadow {
+  0% {
+    box-shadow: 1px 0px 13px #ffbf08;
+    transform: rotateZ(0);
+  }
+  100% {
+    box-shadow: 1px 250px 13px #ffbf08;
+    transform: rotateZ(720deg);
+  }
+}
 .one {
   background: url("../images/bg-one.png") no-repeat;
   background-position: center;
@@ -57,7 +67,7 @@
 .one .one__logo {
   position: relative;
   height: 100vh;
-  background: linear-gradient(to bottom, #0000, #060815);
+  background: linear-gradient(to bottom, #0000, #290e2e);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,8 +104,8 @@
   width: 100%;
   height: 12px;
   background: #ffbf08;
-  animation: 1s rectangule ease-in-out;
-  animation-delay: 0.5s;
+  animation: 1.2s rectangule ease-in-out;
+  box-shadow: 1px 1px 13px #ffbf08;
 }
 .one .one__logo .one__logo__container .one__logo__bar .one__logo__bar__rectangule::before {
   content: "";
